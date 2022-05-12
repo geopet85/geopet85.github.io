@@ -2,22 +2,21 @@ theme: minima
 
 header_pages:
   - about.md
-  - cv.md
   - blog.md
   - random_quotes.md
 
-title: Your awesome title
+title: My data and life diary
 author:
   name: George Petropoulos
   email: geopet85 at gmail dot com
-description: > # this means to ignore newlines until "show_excerpts:"
-  Hi! I am George, and i will practice my writing skills.
-show_excerpts: false # set to true to show excerpts on the homepage
+description: > 
+  I am here just to practise my writing skills 
+  and share a couple stories from software engineering and life.
+show_excerpts: true 
 
 minima:
   date_format: "%b %-d, %Y"
 
-  # generate social links in footer
   social_links:
     twitter: geopet85
     github:  geopet85
