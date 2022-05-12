@@ -1,1 +1,23 @@
 theme: minima
+
+header_pages:
+  - about.md
+  - cv.md
+  - blog.md
+  - random_quotes.md
+
+title: Your awesome title
+author:
+  name: George Petropoulos
+  email: geopet85 at gmail dot com
+description: > # this means to ignore newlines until "show_excerpts:"
+  Hi! I am George, and i will practice my writing skills.
+show_excerpts: false # set to true to show excerpts on the homepage
+
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    twitter: geopet85
+    github:  geopet85
