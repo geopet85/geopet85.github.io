@@ -3,11 +3,9 @@
 
 @import "minima";
 
-@import url('https://raw.githubusercontent.com/blaisck/sfwin/master/SFPro/TrueType/SFProText-Regular.ttf');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body {
-    font-family: "SF Pro Text";
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
     color: #383838;
 }
 

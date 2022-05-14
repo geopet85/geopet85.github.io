@@ -20,6 +20,7 @@ minima:
 header_pages:
   - _pages/welcome.md
   - _pages/about.md
+  - _pages/cv.md
   - _pages/blog.md
 
 include:
