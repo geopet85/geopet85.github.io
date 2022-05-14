@@ -12,7 +12,7 @@ I have worked and experimented with lots of data engineering tools, databases, p
 
 ### Work Experience
 
-##### Chartmogul - Data Engineering Tech Lead (Aug 2021 - present)
+#### Chartmogul - Data Engineering Tech Lead (Aug 2021 - present)
 
 I am currently leading Chartmogul's data engineering team. 
 The team is responsible for: 
