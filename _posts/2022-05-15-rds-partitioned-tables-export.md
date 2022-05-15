@@ -2,6 +2,7 @@
 title: "My experience with exporting Postgres RDS partitioned tables to s3"
 date: 2022-05-15
 layout: post
+tags: aws, rds, postgres, export, s3
 ---
 
 One of my recent tasks was refining a script which exports our RDS databases' snapshots into s3. The concept was straightforward; we would utilize the daily system snapshots of our RDS instances, and export them to one of our s3 buckets as parquet files using boto3 python library. The IAM roles and s3 buckets were setup following the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html), including a KMS key to encrypt our exports, and the [boto3 function](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds.html#RDS.Client.start_export_task) for starting the export was also straightforward. The API has an optional list field `ExportOnly` where we could provide the list of databases or schemas or tables to include in the export. In the first iterations we decided to leave it empty and see what is being exported and experiment accordingly.
