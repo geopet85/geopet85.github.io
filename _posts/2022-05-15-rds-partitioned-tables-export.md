@@ -18,7 +18,6 @@ We have a few databases hosting different data for the application's processing 
 .../database_name/schema_name.second_table/first.parquet
 .../database_name/schema_name.second_table/second.parquet
 										 	  ...
-					 /...
 ```
 
 We then proceeded testing the export in another RDS instance where almost all tables are partitioned based on a tenant identifier. Hence these tables have naming scheme as such `table_name, table_name_1, table_name_2, ..., table_name_10000, table_name_default`. The staging instance had around 14k table partitions deriving from 7 parent tables, but not so much data in total. Export was equally quick with the previous one, structure was a little bit weird but expected:
