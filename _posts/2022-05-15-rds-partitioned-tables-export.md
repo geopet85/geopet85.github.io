@@ -1,23 +1,23 @@
 ---
-title: "Fun with exporting Postgres RDS partitioned tables to s3"
+title: "My experience with exporting Postgres RDS partitioned tables to s3"
 date: 2022-05-15
 layout: post
 ---
 
 ## Rationale 
 
-One of my recent tasks was refining a script which exports our RDS databases into s3. The concept was straightforward; we would utilize the daily system exports of our RDS instances, and export them to one of our s3 buckets as parquet files using boto3 python library. The IAM roles and s3 buckets were setup following the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html), including a KMS key to encrypt our exports, and the [boto3 function](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds.html#RDS.Client.start_export_task) for starting the export was also straightforward. The API has an optional list field `ExportOnly` where we could provide the list of databases or schemas or tables to include in the export. This is the fun point of this post. In the first iterations we decided to leave it empty and see what is being exported and experiment accordingly.
+One of my recent tasks was refining a script which exports our RDS databases' snapshots into s3. The concept was straightforward; we would utilize the daily system snapshots of our RDS instances, and export them to one of our s3 buckets as parquet files using boto3 python library. The IAM roles and s3 buckets were setup following the [AWS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ExportSnapshot.html), including a KMS key to encrypt our exports, and the [boto3 function](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds.html#RDS.Client.start_export_task) for starting the export was also straightforward. The API has an optional list field `ExportOnly` where we could provide the list of databases or schemas or tables to include in the export. In the first iterations we decided to leave it empty and see what is being exported and experiment accordingly.
 
 ## Testing in staging 
 
 We have a few databases hosting different data for the application's processing needs and we also have 2 environments (staging and production). We started with exporting our biggest staging RDS instance which does not include any partitioned tables. Everything went fine, export required a couple minutes (we also added a few more functions in our script to [monitor the export status](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rds.html#RDS.Client.describe_export_tasks)). Also data looked good, tables were exported in different folders including their schema:
 
 ```
-   ... /database_name/schema_name.first_table/first.parquet
-											 /second.parquet
-											   ....
-					 /schema_name.second_table/first.parquet
-										 	  /second.parquet
+.../database_name/schema_name.first_table/first.parquet
+.../database_name/schema_name.first_table/second.parquet
+											  ...
+.../database_name/schema_name.second_table/first.parquet
+.../database_name/schema_name.second_table/second.parquet
 										 	  ...
 					 /...
 ```
@@ -25,17 +25,17 @@ We have a few databases hosting different data for the application's processing 
 We then proceeded testing the export in another RDS instance where almost all tables are partitioned based on a tenant identifier. Hence these tables have naming scheme as such `table_name, table_name_1, table_name_2, ..., table_name_10000, table_name_default`. The staging instance had around 14k table partitions deriving from 7 parent tables, but not so much data in total. Export was equally quick with the previous one, structure was a little bit weird but expected:
 
 ```
-   ... /database_name/schema_name.first_table_1/first.parquet
-											   /second.parquet
-											   ....
-					 /schema_name.first_table_2/first.parquet
-										 	   /second.parquet
+.../database_name/schema_name.first_table_1/first.parquet
+.../database_name/schema_name.first_table_1/second.parquet
+											   ...
+.../database_name/schema_name.first_table_2/first.parquet
+.../database_name/schema_name.first_table_2/second.parquet
 										 	   ...
-					 /schema_name.first_table_2000/first.parquet
-										 	   	  /second.parquet
+.../database_name/schema_name.first_table_2000/first.parquet
+.../database_name/schema_name.first_table_2000/second.parquet
 										 	   ...
-					 /schema_name.first_table/first.parquet
-										 	 /second.parquet
+.../database_name/schema_name.first_table/first.parquet
+.../database_name/schema_name.first_table/second.parquet
 										 	   ...
 ```
 
@@ -47,15 +47,15 @@ Testing in production required different IAM role, s3 bucket and KMS key. The fi
 
 When we tried exporting the highly-partitioned production database we were surprised by the results. The database had 100k tables (5 parent tables with 20k partitions each and 2 unpartitioned tables) with around 1TB of data and export took almost 1 day. This was not a viable approach, as we wanted to setup some ETL workflows for each of the databases and having it running for 1+ day wouldn't make any sense. Without looking at the data we were expecting the export to be completed in a similar timeframe as the non-partitioned one, since we were just exporting the 7 parent tables. When we actually checked the folder structure, we were surprised to find out that each folder had a structure like below:
 ```
-... /database_name/schema_name.first_table/1/first.parquet
-											/second.parquet
-											   ....
-				  /schema_name.first_table/2/first.parquet
-										 	/second.parquet
-										 	   ...
-				  /schema_name.first_table/20000/first.parquet
-										 	   /second.parquet
-										 	   ...
+.../database_name/schema_name.first_table/1/first.parquet
+.../database_name/schema_name.first_table/1/second.parquet
+                                            ...
+.../database_name/schema_name.first_table/2/first.parquet
+.../database_name/schema_name.first_table/2/second.parquet
+										 	...
+.../database_name/schema_name.first_table/20000/first.parquet
+.../database_name/schema_name.first_table/20000/second.parquet
+										 	...
 
 ```
 
@@ -63,4 +63,4 @@ Notice the folders with the partition numbers. Hence the export task created aro
 
 ## Conclusion
 
-Exporting RDS snapshots to s3 is an expensive operation, and its application to a highly-partitioned database is almost non-viable. I wish AWS provided some proper documentation on how the whole operation works and how it could be optimized, 
+Exporting RDS snapshots to s3 is already an expensive operation, and its application to a highly-partitioned database is almost non-viable. For another database we got an export time of almost 2 weeks which was almost useless. I wish AWS provided some proper documentation on how the whole operation works and how it could be optimized, as well as tackle the cases of partitioned tables. 
