@@ -7,53 +7,48 @@ title: Resume
 ### ChartMogul (https://chartmogul.com)
 #### Engineering Manager - Infra team (July 2023 - present)
 
-I am leading ChartMogul's infra team, which consists of 4 cross-functional teams: 
-- Devops
-- Security
-- Data engineering
-- QA
-
-In addition, I led the initiative to migrate ChartMogul's customer facing reports from Postgres to Clickhouse. This significantly optimized charts' performance and allows ChartMogul to scale for larger customers and more complex queries.
-
-Technology stack: Python, FastAPI, Clickhouse, Kafka, Kafka Connect, EKS, and a wide range of AWS services (EKS, Lambdas, Step functions, etc.)
+- Managing the Infra & Data team, shaping the company’s data strategy and architecture to support business growth.
+- Streamlined vendor evaluation and negotiation processes, optimized infrastructure costs, and introduced new procedures to enhance data quality and ensure service stability.
+- Conceptualized, and successfully led the team to migrate ChartMogul’s customer-facing analytics from Postgres to Clickhouse, resulting in a 50% improvement in query performance and the elimination of timeouts for large accounts.
+- Coordinated multiple Postgres migrations and optimizations.
 
 #### Engineering Manager - Data engineering team (Aug 2021 - June 2023)
 
-I led ChartMogul's data engineering team.  
+- Created the Data Engineering team.
+- Set up, and implemented the data analytics stack, including setting up the Snowflake data warehouse, ETL workflows, CDC, and data transformations using dbt.
+- Proactively suggested innovative data product ideas to management, secured buy-in, and successfully led and implemented solutions.
 
-The team is responsible for: 
- - [Data Destinations](https://chartmogul.com/features/#data-output) product design and implementation, 
- - Data analytics, warehousing and ETL workflows to serve internal teams, and,
- - Data engineering consulting on query optimization, modern tech stack adoption and anything related to data engineering. 
+Technology stack: Python, FastAPI, Clickhouse, Snowflake, dbt, Superset, HEX, Segment, Kafka, Kafka Connect, Debezium, AWS, EKS, RDS Postgres, S3, Lambdas, Step Functions, Glue, MSK
 
-Technology stack: Python, Snowflake, dbt, Postgres, and a wide range of AWS services (EKS, Lambdas, Step functions, Glue, MSK, MSK Connect, etc.)
-
-### Channel VAS (https://channelvas.com)
+### Optasia (https://optasia.com)
 #### Data Engineering Manager (Nov 2020 - Aug 2021)
 
-I led the data engineering team in Channel VAS. 
+- Managed the Data Engineering team, and oversaw the execution of 40+ big data projects.
+- Defined and implemented the company’s data stack modernization, introducing state-of-the-art tools and processes to enhance scalability and eﬃciency.
+- Achieved a 5x reduction in ETL workflows' execution time, enabling the business to train and deploy ML models twice as fast.
+- Coordinated the upgrade of 5 self-hosted Hadoop clusters with 200 terabytes of data.
 
-My main responsibilities included leading a team of 5 data engineers, architecting, maintaining and improving ~40 big data projects' ETL processes, batch processing of TBs of data, optimizing performance of, upgrading and setting up the company's big data clusters, and applying novel concepts for data and ML pipelines.
-
-Technology stack: Scala, Python, Spark, Hadoop, MapR, HBase, Airflow, NiFi, PostgreSQL, Docker, AWS.
+Technology stack: Scala, Python, Spark, Streamlit, Hadoop, HBase, Airflow, NiFi, PostgreSQL, Clickhouse
 
 ### Workable (https://www.workable.com)
 #### Lead Data Engineer (Mar 2020 - Oct 2020)
 
-I led the data management team in Workable. 
+- Led the Data Management team.
+- Optimised ETL processes execution time and achieved 10x improvement in data freshness.
+- Championed data openness by implementing self-service data platforms and centralized data cataloging tools to enhance discoverability and accessibility.
 
-My responsibilities included maintaining and improving the performance of the company's internal data ETL pipelines, data warehouse design and setup, integration with support tools, internal reporting, experimentation and adoption of novel data engineering tools and approaches.
-
-Technology stack: Python, Airflow, Redshift, PostgreSQL, BigQuery, Tableau, Docker, Kubernetes, AWS, GC
+Technology stack: Python, Airflow, Redshift, BigQuery, Tableau, AWS, GCP, EKS, S3, RDS Postgres
 
 ### VAIX (https://vaix.ai)
 #### Data Architect (Jul 2017 - Mar 2020)
 
-I led the data engineering team in VAIX.ai, a startup company which implements AI- enabled recommendation, customer and marketing value prediction and chat management systems. 
+- Employee #7, founded the Data Engineering team, instrumental in scaling the company's services to support multiple major customers.
+- Designed and deployed the data engineering stack to integrate seamlessly with various heterogeneous customer data sources.
+- Implemented systems to batch and stream process terabytes of daily data, orchestrating all data and machine learning workflows eﬃciently.
+- Developed the API backend for the recommendation system.
 
-My responsibilities included designing, setting up and maintaining the company's ML and data processing infrastructure and workflows, integration with customers, batch and stream processing of TBs of daily customer data and API backend design and development.
+Technology stack: Python, Java, Scala, Spark, Flink, Kafka, Kafka Connect, Airflow, Hadoop, PostgreSQL, MongoDB, ElasticSearch, Clickhouse, Django, Redis, AWS
 
-Technology stack: Java, Python, Scala, Spark, Flink, Storm, Kafka, Kafka Streams, Confluent stack, RabbitMQ, Airflow, Hadoop, PostgreSQL, MongoDB, ElasticSearch, Clickhouse, Django, Redis, Docker, Rancher, AWS, GC
 
 ### Intracom Telecom (http://www.intracom-telecom.com)
 #### Senior R&D Engineer (Jan 2016 - Jul 2017)
