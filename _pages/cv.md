@@ -8,9 +8,10 @@ title: Resume
 #### Engineering Manager - Infra team (July 2023 - present)
 
 - Managing the Infra & Data team, shaping the company’s data strategy and architecture to support business growth.
-- Streamlined vendor evaluation and negotiation processes, optimized infrastructure costs, and introduced new procedures to enhance data quality and ensure service stability.
-- Conceptualized, and successfully led the team to migrate ChartMogul’s customer-facing analytics from Postgres to Clickhouse, resulting in a 50% improvement in query performance and the elimination of timeouts for large accounts.
-- Coordinated multiple Postgres migrations and optimizations.
+- Conceptualized, and led the team to migrate ChartMogul’s customer-facing analytics from Postgres to Clickhouse, resulting in a 50% improvement in query performance.
+- Coordinated multiple Postgres migrations, upgrades and query optimizations. 
+- Optimized Snowflake costs by 70%.
+- Integrated various AI/LLM-powered use cases into the core product.
 
 #### Engineering Manager - Data engineering team (Aug 2021 - June 2023)
 
