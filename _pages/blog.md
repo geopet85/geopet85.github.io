@@ -16,6 +16,9 @@ title: Blog
 <h2>In ChartMogul</h2>
 <ul>
   <li>
+    <a href="https://chartmogul.com/blog/how-we-reduced-snowflake-costs-by-70-a-practical-optimization-guide/">How we reduced Snowflake costs by 70%: a practical optimization guide</a>
+  </li>
+  <li>
     <a href="https://chartmogul.com/blog/building-a-data-engineering-stack-that-boosts-scalability/">Building a data engineering stack that boosts scalability</a>
   </li>
   <li>
