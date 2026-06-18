@@ -4,7 +4,7 @@ layout: page
 title: Resume
 ---
 
-### ChartMogul (https://chartmogul.com)
+### ChartMogul [↗](https://chartmogul.com)
 #### Engineering Manager - Data & AI team (June 2026 - present)
 
 - Promoted to lead the new Data & AI team of 4 engineers, owning ChartMogul's data and AI strategy from idea through to production and adoption.
@@ -27,7 +27,7 @@ title: Resume
 
 Technology stack: Python, FastAPI, ClickHouse, Snowflake, dbt, MCP, Bedrock, AgentCore, Strands Agents, Superset, HEX, Segment, Kafka, Kafka Connect, Debezium, AWS, EKS, RDS Postgres, S3, Lambdas, Step Functions, Glue, MSK
 
-### Optasia (https://optasia.com)
+### Optasia [↗](https://optasia.com)
 #### Data Engineering Manager (Nov 2020 - Aug 2021)
 
 - Managed the Data Engineering team, and oversaw the execution of 40+ big data projects.
@@ -37,7 +37,7 @@ Technology stack: Python, FastAPI, ClickHouse, Snowflake, dbt, MCP, Bedrock, Age
 
 Technology stack: Scala, Python, Spark, Streamlit, Hadoop, HBase, Airflow, NiFi, PostgreSQL, ClickHouse
 
-### Workable (https://www.workable.com)
+### Workable [↗](https://www.workable.com)
 #### Lead Data Engineer (Mar 2020 - Oct 2020)
 
 - Led the Data Management team.
@@ -46,7 +46,7 @@ Technology stack: Scala, Python, Spark, Streamlit, Hadoop, HBase, Airflow, NiFi,
 
 Technology stack: Python, Airflow, Redshift, BigQuery, Tableau, AWS, GCP, EKS, S3, RDS Postgres
 
-### VAIX (https://vaix.ai)
+### VAIX [↗](https://vaix.ai)
 #### Data Architect (Jul 2017 - Mar 2020)
 
 - Employee #7, started the Data Engineering team and helped scale the company's services to support multiple major customers.
@@ -57,7 +57,7 @@ Technology stack: Python, Airflow, Redshift, BigQuery, Tableau, AWS, GCP, EKS, S
 Technology stack: Python, Java, Scala, Spark, Flink, Kafka, Kafka Connect, Airflow, Hadoop, PostgreSQL, MongoDB, ElasticSearch, ClickHouse, Django, Redis, AWS
 
 
-### Intracom Telecom (http://www.intracom-telecom.com)
+### Intracom Telecom [↗](http://www.intracom-telecom.com)
 #### Senior R&D Engineer (Jan 2016 - Jul 2017)
 #### R&D Engineer (Jan 2010 - Dec 2015)
 
