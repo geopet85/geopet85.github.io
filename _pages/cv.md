@@ -8,8 +8,9 @@ title: Resume
 #### Engineering Manager - Data & AI team (June 2026 - present)
 
 - Promoted to lead the new Data & AI team of 4 engineers, owning ChartMogul's data and AI strategy from idea through to production and adoption.
-- Started and led ChartMogul's AI initiatives. This includes a publicly launched MCP server that opens up ChartMogul analytics to AI clients, along with other AI features in the product. I took each one from the first idea, to a proof of concept, to something customers use.
+- Started and led ChartMogul's AI initiatives: an AI assistant in the product, a publicly launched MCP server that opens up ChartMogul analytics to AI clients, and AI-powered data enrichment. I envisioned each one, built the proof of concept, architected the solution, and released it to customers.
 - Set up how the team finds, prototypes and ships AI products, turning experiments into features that customers actually use.
+- Build LLM features hands-on, working with agents, multi-agent systems, RAG, embeddings, knowledge bases, tool use and evals.
 
 #### Engineering Manager - Infra team (July 2023 - June 2026)
 
