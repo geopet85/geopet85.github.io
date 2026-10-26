@@ -12,4 +12,6 @@ This is how I have worked for a long time. I tend to spot a need, get buy-in, bu
 
 I have worked and experimented with lots of data and AI tools, databases, programming languages, libraries and cloud services. I am currently working with ClickHouse, Snowflake, dbt and MCP, and I think about how I can improve ChartMogul's data and AI architecture. Day to day I build with LLMs, working with agents, multi-agent systems, RAG, embeddings, knowledge bases, tool use and evals to turn them into product features.
 
+On the side I am experimenting with LLMs and SaaS, building [Amendary](https://amendary.com) (AI-assisted documentation that stays in sync with your code) and [Ergotaxis](https://ergotaxis.com) (software for engineers and technical offices in Greece).
+
 I am documenting my experiences from life, data and AI engineering, while also maintaining my cv into the [Resume](/cv) page. This way I hope to improve my technical (and not only) writing. 
