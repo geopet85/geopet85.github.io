@@ -1,5 +1,5 @@
 ---
-title: "Running helped me recover from dizziness"
+title: "Running helped me with dizziness in the era of LLMs"
 date: 2026-11-18
 layout: post
 ---
